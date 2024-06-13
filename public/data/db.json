@@ -1,0 +1,182 @@
+[
+    {
+        "Name": "John",
+        "Surname": "Doe",
+        "Department": "Engineering",
+        "Position": "Software Engineer",
+        "EmployeeNumber": 83421,
+        "Email": "john.doe@company.com",
+        "Phone": "+1-202-555-0123"
+    },
+    {
+        "Name": "Jane",
+        "Surname": "Smith",
+        "Department": "Marketing",
+        "Position": "Marketing Manager",
+        "EmployeeNumber": 72613,
+        "Email": "jane.smith@company.com",
+        "Phone": "+1-202-555-0456"
+    },
+    {
+        "Name": "Alice",
+        "Surname": "Johnson",
+        "Department": "Human Resources",
+        "Position": "HR Specialist",
+        "EmployeeNumber": 59147,
+        "Email": "alice.johnson@company.com",
+        "Phone": "+1-202-555-0789"
+    },
+    {
+        "Name": "Bob",
+        "Surname": "Brown",
+        "Department": "Sales",
+        "Position": "Sales Representative",
+        "EmployeeNumber": 48592,
+        "Email": "bob.brown@company.com",
+        "Phone": "+1-202-555-0134"
+    },
+    {
+        "Name": "Charlie",
+        "Surname": "Davis",
+        "Department": "Engineering",
+        "Position": "DevOps Engineer",
+        "EmployeeNumber": 39428,
+        "Email": "charlie.davis@company.com",
+        "Phone": "+1-202-555-0678"
+    },
+    {
+        "Name": "Eve",
+        "Surname": "Miller",
+        "Department": "Design",
+        "Position": "Graphic Designer",
+        "EmployeeNumber": 27365,
+        "Email": "eve.miller@company.com",
+        "Phone": "+1-202-555-0234"
+    },
+    {
+        "Name": "Frank",
+        "Surname": "Wilson",
+        "Department": "Engineering",
+        "Position": "Frontend Developer",
+        "EmployeeNumber": 61283,
+        "Email": "frank.wilson@company.com",
+        "Phone": "+1-202-555-0457"
+    },
+    {
+        "Name": "Grace",
+        "Surname": "Lee",
+        "Department": "Customer Support",
+        "Position": "Support Specialist",
+        "EmployeeNumber": 50137,
+        "Email": "grace.lee@company.com",
+        "Phone": "+1-202-555-0890"
+    },
+    {
+        "Name": "Hank",
+        "Surname": "Taylor",
+        "Department": "Finance",
+        "Position": "Accountant",
+        "EmployeeNumber": 34719,
+        "Email": "hank.taylor@company.com",
+        "Phone": "+1-202-555-0567"
+    },
+    {
+        "Name": "Ivy",
+        "Surname": "Anderson",
+        "Department": "Marketing",
+        "Position": "SEO Specialist",
+        "EmployeeNumber": 28374,
+        "Email": "ivy.anderson@company.com",
+        "Phone": "+1-202-555-0456"
+    },
+    {
+        "Name": "Jack",
+        "Surname": "Thomas",
+        "Department": "Engineering",
+        "Position": "Backend Developer",
+        "EmployeeNumber": 17934,
+        "Email": "jack.thomas@company.com",
+        "Phone": "+1-202-555-0345"
+    },
+    {
+        "Name": "Karen",
+        "Surname": "Moore",
+        "Department": "Human Resources",
+        "Position": "Recruiter",
+        "EmployeeNumber": 56428,
+        "Email": "karen.moore@company.com",
+        "Phone": "+1-202-555-0789"
+    },
+    {
+        "Name": "Leo",
+        "Surname": "Jackson",
+        "Department": "Engineering",
+        "Position": "Data Scientist",
+        "EmployeeNumber": 67413,
+        "Email": "leo.jackson@company.com",
+        "Phone": "+1-202-555-0678"
+    },
+    {
+        "Name": "Mia",
+        "Surname": "Martin",
+        "Department": "Sales",
+        "Position": "Sales Manager",
+        "EmployeeNumber": 49312,
+        "Email": "mia.martin@company.com",
+        "Phone": "+1-202-555-0890"
+    },
+    {
+        "Name": "Nick",
+        "Surname": "White",
+        "Department": "Marketing",
+        "Position": "Content Strategist",
+        "EmployeeNumber": 23784,
+        "Email": "nick.white@company.com",
+        "Phone": "+1-202-555-0567"
+    },
+    {
+        "Name": "Olivia",
+        "Surname": "Harris",
+        "Department": "Engineering",
+        "Position": "QA Engineer",
+        "EmployeeNumber": 34578,
+        "Email": "olivia.harris@company.com",
+        "Phone": "+1-202-555-0234"
+    },
+    {
+        "Name": "Paul",
+        "Surname": "Clark",
+        "Department": "Operations",
+        "Position": "Operations Manager",
+        "EmployeeNumber": 17392,
+        "Email": "paul.clark@company.com",
+        "Phone": "+1-202-555-0789"
+    },
+    {
+        "Name": "Quinn",
+        "Surname": "Lewis",
+        "Department": "Legal",
+        "Position": "Legal Counsel",
+        "EmployeeNumber": 25674,
+        "Email": "quinn.lewis@company.com",
+        "Phone": "+1-202-555-0678"
+    },
+    {
+        "Name": "Ruth",
+        "Surname": "Walker",
+        "Department": "Engineering",
+        "Position": "Machine Learning Engineer",
+        "EmployeeNumber": 37461,
+        "Email": "ruth.walker@company.com",
+        "Phone": "+1-202-555-0456"
+    },
+    {
+        "Name": "Steve",
+        "Surname": "Hall",
+        "Department": "Engineering",
+        "Position": "Cloud Architect",
+        "EmployeeNumber": 48925,
+        "Email": "steve.hall@company.com",
+        "Phone": "+1-202-555-0123"
+    }
+]
