@@ -30,8 +30,8 @@ const Workers = ({ openModal, getData, searchTerm, selectedValues }) => {
           .filter((item) => {
             if (selectedValues.length > 0) {
               return (
+                selectedValues.includes(item.Name) ||
                 selectedValues.includes(item.Department.toLowerCase()) ||
-                selectedValues.includes(item.Name.toLowerCase()) ||
                 selectedValues.includes(item.EmployeeNumber.toString()) ||
                 selectedValues.includes(item.Email.toLowerCase())
               );
@@ -39,6 +39,7 @@ const Workers = ({ openModal, getData, searchTerm, selectedValues }) => {
             return true;
           })
           .map((user, index) => (
+            console.log("Filtered user:", user.Name),
             <Card key={index}>
               <CardHeader>
                 <div className="flex flex-center items-center space-x-4">
@@ -47,9 +48,7 @@ const Workers = ({ openModal, getData, searchTerm, selectedValues }) => {
                     src="/profile.png"
                     alt=""
                   />
-                  <CardTitle>
-                    {user.Name} {user.Surname}
-                  </CardTitle>
+                  <CardTitle>{user.Name}</CardTitle>
                 </div>
                 <CardDescription>{user.Department}</CardDescription>
               </CardHeader>
@@ -61,7 +60,6 @@ const Workers = ({ openModal, getData, searchTerm, selectedValues }) => {
                   onClick={() =>
                     openModal({
                       name: user.Name,
-                      surname: user.Surname,
                       department: user.Department,
                       position: user.Position,
                       employeeNumber: user.EmployeeNumber,

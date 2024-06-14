@@ -16,7 +16,7 @@ const ModalCentered = ({ modalContent, onClose, isOpen }) => {
       <ModalOverlay />
       <ModalContent>
         <ModalHeader>
-          {modalContent ? `${modalContent.name} ${modalContent.surname}` : 'Modal Title'}
+          {modalContent ? `${modalContent.name} ` : 'Modal Title'}
         </ModalHeader>
         <ModalCloseButton />
         <ModalBody>

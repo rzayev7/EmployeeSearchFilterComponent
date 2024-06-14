@@ -3,6 +3,7 @@ import Workers from './main/Workers';
 import ModalCentered from './modal/Modal';
 import FilterDrawer from './filter/Filter';
 import Search from './search/Search';
+import SelectedFilters from './filter/SelectedFilters';
 
 export async function getData() {
   const result = await fetch("/data/db.json");
@@ -15,7 +16,6 @@ export default function Page() {
   const [modalContent, setModalContent] = useState(null);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedValues, setSelectedValues] = useState([]);
-
   const openModal = (content) => {
     setModalContent(content);
     setIsOpen(true);
@@ -26,18 +26,31 @@ export default function Page() {
     setModalContent(null);
   };
 
+  const clearFilter = (value) => {
+    setSelectedValues(selectedValues.filter(item => item !== value));
+  };
+
   return (
     <>
-      {isOpen && <ModalCentered isOpen={isOpen} onClose={closeModal} modalContent={modalContent} />}
+      {isOpen && (
+        <ModalCentered isOpen={isOpen} onClose={closeModal} modalContent={modalContent} />
+      )}
       <div className="flex justify-between items-center mb-4">
         <h1 className="text-5xl mb-24">Our employees</h1>
       </div>
-      <div className='flex flex-row justify-between'>
-    
-      <Search className="mb-12" searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-      <FilterDrawer setSelectedValues={setSelectedValues} getData={getData} />
+      <div className="flex flex-row justify-between mb-12">
+        <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+        <FilterDrawer setSelectedValues={setSelectedValues} getData={getData} />
       </div>
-      <Workers selectedValues={selectedValues} openModal={openModal} getData={getData} searchTerm={searchTerm} />
+      
+      <SelectedFilters selectedValues={selectedValues} clearFilter={clearFilter} />
+      
+      <Workers
+        selectedValues={selectedValues}
+        openModal={openModal}
+        getData={getData}
+        searchTerm={searchTerm}
+      />
     </>
   );
 }

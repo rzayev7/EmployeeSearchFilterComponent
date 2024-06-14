@@ -1,7 +1,6 @@
 [
     {
-        "Name": "John",
-        "Surname": "Doe",
+        "Name": "John Doe",
         "Department": "Engineering",
         "Position": "Software Engineer",
         "EmployeeNumber": 83421,
@@ -9,8 +8,7 @@
         "Phone": "+1-202-555-0123"
     },
     {
-        "Name": "Jane",
-        "Surname": "Smith",
+        "Name": "Jane Smith",
         "Department": "Marketing",
         "Position": "Marketing Manager",
         "EmployeeNumber": 72613,
@@ -18,8 +16,7 @@
         "Phone": "+1-202-555-0456"
     },
     {
-        "Name": "Alice",
-        "Surname": "Johnson",
+        "Name": "Alice Johnson",
         "Department": "Human Resources",
         "Position": "HR Specialist",
         "EmployeeNumber": 59147,
@@ -27,8 +24,7 @@
         "Phone": "+1-202-555-0789"
     },
     {
-        "Name": "Bob",
-        "Surname": "Brown",
+        "Name": "Bob Brown",
         "Department": "Sales",
         "Position": "Sales Representative",
         "EmployeeNumber": 48592,
@@ -36,8 +32,7 @@
         "Phone": "+1-202-555-0134"
     },
     {
-        "Name": "Charlie",
-        "Surname": "Davis",
+        "Name": "Charlie Davis",
         "Department": "Engineering",
         "Position": "DevOps Engineer",
         "EmployeeNumber": 39428,
@@ -45,8 +40,7 @@
         "Phone": "+1-202-555-0678"
     },
     {
-        "Name": "Eve",
-        "Surname": "Miller",
+        "Name": "Eve Miller",
         "Department": "Design",
         "Position": "Graphic Designer",
         "EmployeeNumber": 27365,
@@ -54,8 +48,7 @@
         "Phone": "+1-202-555-0234"
     },
     {
-        "Name": "Frank",
-        "Surname": "Wilson",
+        "Name": "Frank Wilson",
         "Department": "Engineering",
         "Position": "Frontend Developer",
         "EmployeeNumber": 61283,
@@ -63,8 +56,7 @@
         "Phone": "+1-202-555-0457"
     },
     {
-        "Name": "Grace",
-        "Surname": "Lee",
+        "Name": "Grace Lee",
         "Department": "Customer Support",
         "Position": "Support Specialist",
         "EmployeeNumber": 50137,
@@ -72,8 +64,7 @@
         "Phone": "+1-202-555-0890"
     },
     {
-        "Name": "Hank",
-        "Surname": "Taylor",
+        "Name": "Hank Taylor",
         "Department": "Finance",
         "Position": "Accountant",
         "EmployeeNumber": 34719,
@@ -81,8 +72,7 @@
         "Phone": "+1-202-555-0567"
     },
     {
-        "Name": "Ivy",
-        "Surname": "Anderson",
+        "Name": "Ivy Anderson",
         "Department": "Marketing",
         "Position": "SEO Specialist",
         "EmployeeNumber": 28374,
@@ -90,8 +80,7 @@
         "Phone": "+1-202-555-0456"
     },
     {
-        "Name": "Jack",
-        "Surname": "Thomas",
+        "Name": "Jack Thomas",
         "Department": "Engineering",
         "Position": "Backend Developer",
         "EmployeeNumber": 17934,
@@ -99,8 +88,7 @@
         "Phone": "+1-202-555-0345"
     },
     {
-        "Name": "Karen",
-        "Surname": "Moore",
+        "Name": "Karen Moore",
         "Department": "Human Resources",
         "Position": "Recruiter",
         "EmployeeNumber": 56428,
@@ -108,8 +96,7 @@
         "Phone": "+1-202-555-0789"
     },
     {
-        "Name": "Leo",
-        "Surname": "Jackson",
+        "Name": "Leo Jackson",
         "Department": "Engineering",
         "Position": "Data Scientist",
         "EmployeeNumber": 67413,
@@ -117,8 +104,7 @@
         "Phone": "+1-202-555-0678"
     },
     {
-        "Name": "Mia",
-        "Surname": "Martin",
+        "Name": "Mia Martin",
         "Department": "Sales",
         "Position": "Sales Manager",
         "EmployeeNumber": 49312,
@@ -126,8 +112,7 @@
         "Phone": "+1-202-555-0890"
     },
     {
-        "Name": "Nick",
-        "Surname": "White",
+        "Name": "Nick White",
         "Department": "Marketing",
         "Position": "Content Strategist",
         "EmployeeNumber": 23784,
@@ -135,8 +120,7 @@
         "Phone": "+1-202-555-0567"
     },
     {
-        "Name": "Olivia",
-        "Surname": "Harris",
+        "Name": "Olivia Harris",
         "Department": "Engineering",
         "Position": "QA Engineer",
         "EmployeeNumber": 34578,
@@ -144,8 +128,7 @@
         "Phone": "+1-202-555-0234"
     },
     {
-        "Name": "Paul",
-        "Surname": "Clark",
+        "Name": "Paul Clark",
         "Department": "Operations",
         "Position": "Operations Manager",
         "EmployeeNumber": 17392,
@@ -153,8 +136,7 @@
         "Phone": "+1-202-555-0789"
     },
     {
-        "Name": "Quinn",
-        "Surname": "Lewis",
+        "Name": "Quinn Lewis",
         "Department": "Legal",
         "Position": "Legal Counsel",
         "EmployeeNumber": 25674,
@@ -162,8 +144,7 @@
         "Phone": "+1-202-555-0678"
     },
     {
-        "Name": "Ruth",
-        "Surname": "Walker",
+        "Name": "Ruth Walker",
         "Department": "Engineering",
         "Position": "Machine Learning Engineer",
         "EmployeeNumber": 37461,
@@ -171,8 +152,7 @@
         "Phone": "+1-202-555-0456"
     },
     {
-        "Name": "Steve",
-        "Surname": "Hall",
+        "Name": "Steve Hall",
         "Department": "Engineering",
         "Position": "Cloud Architect",
         "EmployeeNumber": 48925,

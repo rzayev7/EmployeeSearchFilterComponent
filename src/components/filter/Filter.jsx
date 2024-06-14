@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { Checkbox, CheckboxGroup, VStack } from "@chakra-ui/react";
-import NestedFilterDrawer from "./NestedFilter";
 import {
+  Checkbox,
+  CheckboxGroup,
+  VStack,
   Drawer,
   DrawerBody,
   DrawerFooter,
@@ -14,10 +15,12 @@ import {
   Box,
   Text,
 } from "@chakra-ui/react";
+import NestedFilterDrawer from "./NestedFilter";
 
 const FilterDrawer = ({ getData, setSelectedValues }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [data, setData] = useState([]);
+  const [seeAll, setSeeAll] = useState([]);
   const [query, setQuery] = useState({
     mail: "",
     name: "",
@@ -36,7 +39,7 @@ const FilterDrawer = ({ getData, setSelectedValues }) => {
   useEffect(() => {
     const fetchData = async () => {
       const fetchedData = await getData();
-      console.log("Fetched data:", fetchedData);
+      console.log("Fetched data:", fetchedData); // Log fetched data
       setData(fetchedData);
     };
     fetchData();
@@ -44,11 +47,12 @@ const FilterDrawer = ({ getData, setSelectedValues }) => {
 
   const handleCheckboxChange = (selectedValues) => {
     setSelectedFilter(selectedValues);
-    console.log(selectedValues);
+    console.log("Selected Filters:", selectedValues);
   };
 
   const applySelectedCheckbox = () => {
     setSelectedValues(selectedFilter);
+    console.log("Applying Filters:", selectedFilter);
   };
 
   const handleInputChange = (e) => {
@@ -57,6 +61,45 @@ const FilterDrawer = ({ getData, setSelectedValues }) => {
       ...prevQuery,
       [name]: value,
     }));
+  };
+
+  const saveClickedItems = (category) => {
+    let items;
+    switch (category) {
+      case "mail":
+        items = data
+          .filter((item) =>
+            item.Email.toLowerCase().includes(query.mail.toLowerCase())
+          )
+          .map((item) => item.Email);
+        break;
+      case "name":
+        items = data
+          .filter((item) =>
+            item.Name.toLowerCase().includes(query.name.toLowerCase())
+          )
+          .map((item) => item.Name);
+        break;
+      case "employeeNumber":
+        items = data
+          .filter((item) =>
+            item.EmployeeNumber.toString().includes(query.employeeNumber)
+          )
+          .map((item) => item.EmployeeNumber.toString());
+        break;
+      case "department":
+        items = [
+          ...new Set(data.map((item) => item.Department.toLowerCase())),
+        ].filter((department) =>
+          department.includes(query.department.toLowerCase())
+        );
+        break;
+      default:
+        items = [];
+    }
+    setSeeAll(items);
+    setShowNestedDrawer(true);
+    console.log("seeAll items:", items); // Log items to ensure correct data is being set
   };
 
   const renderFilterOptions = () => {
@@ -92,14 +135,14 @@ const FilterDrawer = ({ getData, setSelectedValues }) => {
           {data.filter((item) =>
             item.Email.toLowerCase().includes(query.mail.toLowerCase())
           ).length > 5 && (
-            <Button onClick={() => setShowNestedDrawer(true)} mt={2}>
+            <Button onClick={() => saveClickedItems("mail")} mt={2}>
               See All
             </Button>
           )}
         </Box>
 
         <Box>
-          <Text fontSize="lg">Name Surname</Text>
+          <Text fontSize="lg">Name</Text>
           <VStack align="start">
             <CheckboxGroup
               value={selectedFilter}
@@ -107,23 +150,25 @@ const FilterDrawer = ({ getData, setSelectedValues }) => {
             >
               {data
                 .filter((item) =>
-                  `${item.Name} ${item.Surname}`
-                    .toLowerCase()
-                    .includes(query.name.toLowerCase())
+                  item.Name.toLowerCase().includes(query.name.toLowerCase())
                 )
                 .slice(0, showAll.name ? undefined : 5)
                 .map((item, index) => (
-                  <Checkbox key={index} value={`${item.Name} ${item.Surname}`}>
-                    {item.Name} {item.Surname}
+                  <Checkbox key={index} value={item.Name}>
+                    {item.Name}
                   </Checkbox>
                 ))}
             </CheckboxGroup>
           </VStack>
           {data.filter((item) =>
-            `${item.Name} ${item.Surname}`
+            `${item.Name}`
               .toLowerCase()
               .includes(query.name.toLowerCase())
-          ).length > 5 && <Button onClick={() => setShowNestedDrawer(true)} mt={2}>See All</Button>}
+          ).length > 5 && (
+            <Button onClick={() => saveClickedItems("name")} mt={2}>
+              See All
+            </Button>
+          )}
         </Box>
 
         <Box>
@@ -147,7 +192,11 @@ const FilterDrawer = ({ getData, setSelectedValues }) => {
           </VStack>
           {data.filter((item) =>
             item.EmployeeNumber.toString().includes(query.employeeNumber)
-          ).length > 5 && <Button onClick={() => setShowNestedDrawer(true)} mt={2}>See All</Button>}
+          ).length > 5 && (
+            <Button onClick={() => saveClickedItems("employeeNumber")} mt={2}>
+              See All
+            </Button>
+          )}
         </Box>
 
         <Box>
@@ -171,7 +220,11 @@ const FilterDrawer = ({ getData, setSelectedValues }) => {
           </VStack>
           {uniqueDepartments.filter((department) =>
             department.includes(query.department.toLowerCase())
-          ).length > 5 && <Button  mt={2}>See All</Button>}
+          ).length > 5 && (
+            <Button onClick={() => saveClickedItems("department")} mt={2}>
+              See All
+            </Button>
+          )}
         </Box>
       </>
     );
@@ -205,12 +258,19 @@ const FilterDrawer = ({ getData, setSelectedValues }) => {
           </DrawerFooter>
         </DrawerContent>
       </Drawer>
-      {/* Conditional rendering of the nested filter drawer */}
       {showNestedDrawer && (
-        <NestedFilterDrawer onClose={() => setShowNestedDrawer(false)} />
+        <NestedFilterDrawer 
+          seeAllClickedData={seeAll}
+          onClose={() => setShowNestedDrawer(false)}
+          onApply={(items) => {
+            setSelectedValues(items);
+            setShowNestedDrawer(false);
+          }}
+        />
       )}
     </>
   );
 };
 
 export default FilterDrawer;
+          
